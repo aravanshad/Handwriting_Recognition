@@ -1,1 +1,43 @@
-grge
+The first thing we need to run this assigment is TensorFlow installation. 
+I have summarized how to install, check, and load tensorflow on your mac. 
+I have to mention that I do not have installed Anaconda. But you should have pip already installed.
+Here are the step-by-step process:
+
+1- installation: open the terminal and run the following codes line-by-line:
+$ pwd
+$ sudo pip install --upgrade virtualenv
+$ cd ~/tensorflow/
+$ source bin/activate
+$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/tensorflow-0.9.0rc0-py2-none-any.whl
+$ sudo pip install --upgrade $TF_BINARY_URL
+
+2- Check if it has been installed correctly
+$ cd ~/tensorflow/
+$ source bin/activate
+$ python
+>>> import tensorflow as tf
+>>> hello = tf.constant('Hello, TensorFlow!')
+>>> sess = tf.Session()
+>>> print sess.run(hello)
+>>> quit ()
+(tensorflow)$ deactivate
+$ 
+
+3- quit()
+(tensorflow) username$ conda install ipython
+(tensorflow) username$ pip install jupyter
+
+Download and install Anaconda for Python 3.5.
+From the TensorFlow installation instructions:
+conda create -n tensorflow python=3.5
+source activate tensorflow
+conda install -c conda-forge tensorflow
+From StackOverflow:
+conda install notebook ipykernel
+Launch Jupyter:
+jupyter notebook
+Create a notebook and type in Hello World:
+import tensorflow as tf
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
