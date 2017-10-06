@@ -1,1 +1,1 @@
-Using regularization techniques to improve a deep learning model
+Using regularization techniques to improve the model
